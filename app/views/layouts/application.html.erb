@@ -19,10 +19,14 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     <%= javascript_importmap_tags %>
-  </head>
+    </head>
+    <%= render partial: "pages/navbar" %>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
